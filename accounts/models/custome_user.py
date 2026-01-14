@@ -47,7 +47,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     ]
 
     email = models.EmailField(unique = True)
-    role = models.CharField(max_length=20, choices = ROLE_CHOICES)
+    role = models.CharField(max_length=20, choices = ROLE_CHOICES, default = MEMBER)
     branch =  models.ForeignKey(Branch, on_delete = models.SET_NULL, null = True, blank = True) # nullable field beacuse admin do not need branch name.
     date_joined = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
