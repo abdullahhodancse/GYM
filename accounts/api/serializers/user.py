@@ -2,7 +2,7 @@ from rest_framework import serializers
 from accounts.models.custome_user import User
 
 class UserSerializer(serializers.ModelSerializer):
-    role = serializers.ChoiceField(choices=[('admin', 'Admin'),('manager', 'Manager'), ('member', 'Member'), ('trainer', 'Trainer')], required=True)
+    role = serializers.ChoiceField(choices=[('manager', 'Manager'), ('member', 'Member'), ('trainer', 'Trainer')], required=True)
 
     class Meta:
         model = User
