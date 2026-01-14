@@ -9,14 +9,14 @@ class WorkOutPlanSerializer(serializers.ModelSerializer):
         model = WorkOutPlan
 
         fields = [
-            "id","title","description"
+            "id","title","description","created_by", "branch"
         ]
 
 # validation, branch and created by added here,,so no need to send these.
-        def create(self, validated_data):
+    def create(self, validated_data):
             trainer = self.context["request"].user.trainer
             return WorkOutPlan.objects.create(created_by=trainer, branch=trainer.branch, **validated_data)
-           
+               
         
     
 
