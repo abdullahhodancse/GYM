@@ -1,0 +1,2 @@
+from workouts.admin.workOut_admin import WorkOutPlanAdmin
+from workouts.admin.work_task import WorkOutTaskAdmin
