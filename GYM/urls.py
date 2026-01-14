@@ -21,9 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/',include('accounts.api.urls')),
     path('branches/',include('branches.api.urls')),
-#     path('workout/',include('workout.api.urls'))
+    path('workout/',include('workouts.api.urls'))
 ]
 
 
 # admin email:admin@gmail.com
-#password:1234
+# password:1234
