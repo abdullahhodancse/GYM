@@ -1,6 +1,6 @@
 from rest_framework import generics, permissions, status
 from rest_framework.response import Response
-from accounts.api.serializers.admin_reg import AdminRegisterSerializer
+from accounts.api.serializers.general.admin_reg import AdminRegisterSerializer
 
 
 class AdminRegisterView(generics.CreateAPIView):

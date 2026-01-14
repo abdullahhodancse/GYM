@@ -8,9 +8,9 @@ from accounts.models.custome_user import User
 from rest_framework.exceptions import ValidationError
 
 
-from accounts.api.serializers.trainer import TrainerSerializer
-from accounts.api.serializers.member import MemberSerializer
-from accounts.api.serializers.manager import ManagerSerializer
+from accounts.api.serializers.general.trainer import TrainerSerializer
+from accounts.api.serializers.general.member import MemberSerializer
+from accounts.api.serializers.general.manager import ManagerSerializer
 
 
 

@@ -7,8 +7,8 @@ from django.core.exceptions import ValidationError
 class Trainer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     branch = models.ForeignKey(Branch, on_delete=models.CASCADE)
-    phone_number = models.CharField(max_length=15)
-    address = models.TextField()
+    phone_number = models.CharField(max_length=15,null = True,blank = True)
+    address = models.TextField(null= True,blank = True)
     created_at = models.DateTimeField(default=timezone.now)
 
 

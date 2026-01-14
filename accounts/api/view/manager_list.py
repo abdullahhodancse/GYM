@@ -1,6 +1,6 @@
 from rest_framework import generics
 from accounts.models.manager import Manager
-from accounts.api.serializers.manager_list import ManagerListSerializer
+from accounts.api.serializers.manager.manager_list import ManagerListSerializer
 from admin_permission import IsAdmin
 
 class ManagerListView(generics.ListAPIView):
