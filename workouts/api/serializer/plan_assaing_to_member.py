@@ -1,4 +1,4 @@
-# workouts/api/serializers/member_workout_assign.py
+# workouts/api/serializer/plan_assign_to_member.py
 
 from rest_framework import serializers
 from workouts.models.memberworkOut import MemberWorkOut
@@ -9,10 +9,11 @@ from accounts.models.member import Member
 class MemberWorkoutAssignSerializer(serializers.ModelSerializer):
     workout_plan_id = serializers.IntegerField(write_only=True)
     member_id = serializers.IntegerField(write_only=True)
+    due_date = serializers.DateField()
 
     class Meta:
         model = MemberWorkOut
-        fields = ["workout_plan_id", "member_id"]
+        fields = ["workout_plan_id", "member_id", "due_date"]
 
     def validate(self, data):
         request = self.context["request"]
@@ -21,19 +22,17 @@ class MemberWorkoutAssignSerializer(serializers.ModelSerializer):
         workout_plan = WorkOutPlan.objects.get(id=data["workout_plan_id"])
         member = Member.objects.get(id=data["member_id"])
 
-        # ✅ Trainer can assign only his own plan
         if workout_plan.created_by_id != trainer.id:
             raise serializers.ValidationError(
-                "You can assign members only to your own workout plan"
+                "You can assign only your own workout plan"
             )
 
-        #  Trainer & Member must be same branch
         if member.branch_id != trainer.branch_id:
             raise serializers.ValidationError(
-                "You can assign only members from your own branch"
+                "You can assign only members from your branch"
             )
 
-        data["workout_plan"] = workout_plan
+        data["workoutplan"] = workout_plan
         data["member"] = member
         return data
 
