@@ -98,6 +98,34 @@ Local Base URL:
 http://127.0.0.1:8000/
 
 
+You have to add it in.env,,,it given beacude just for testing
+
+
+POSTGRES_DB=GYM
+
+
+POSTGRES_USER=postgres
+
+
+POSTGRES_PASSWORD=1234
+
+
+DB_HOST=localhost
+
+
+DB_PORT=5432
+
+
+
+Admin_pass=GYM@1234567890
+
+
+PROJECT_PASS_KEY=django-insecure-x_+2#dqo4zv-b3ju6a$d)rcv0uf!2ow(ok9xfmo^!2f8%3+$qo
+
+
+
+
+
 
 
 
