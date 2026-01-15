@@ -1,9 +1,12 @@
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import exceptions
+from rate_limit import LoginRateThrottle
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     username_field = 'email'
+    throttle_classes = [LoginRateThrottle]
+
 
     def validate(self, attrs):
         
