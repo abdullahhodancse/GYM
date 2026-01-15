@@ -2,10 +2,12 @@ from rest_framework import generics
 from accounts.models.member import Member
 from accounts.api.serializers.member.branch_wise_member import BranchWiseMemberListSerializer
 from permissions.adminOrManager_permission import IsAdminOrManager
+from pagination import Pagination
 
 class BranchWiseMemberListView(generics.ListAPIView):
     serializer_class = BranchWiseMemberListSerializer
     permission_classes = [IsAdminOrManager]
+    pagination_class = Pagination
 
     def get_queryset(self):
         user = self.request.user

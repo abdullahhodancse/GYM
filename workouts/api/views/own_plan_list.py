@@ -5,6 +5,7 @@ from rest_framework.permissions import IsAuthenticated
 from workouts.models.memberworkOut import MemberWorkOut
 from workouts.api.serializer.own_plan_list import MemberAssignedWorkoutListSerializer
 from permissions.member_permission import IsMember
+from pagination import Pagination
    
 
 
@@ -12,6 +13,7 @@ from permissions.member_permission import IsMember
 class MemberAssignedWorkoutListView(generics.ListAPIView):
     serializer_class = MemberAssignedWorkoutListSerializer
     permission_classes = [IsMember]
+    pagination_class = Pagination
 
     def get_queryset(self):
         return (
