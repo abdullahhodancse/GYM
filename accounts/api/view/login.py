@@ -5,7 +5,7 @@ from rate_limit import LoginRateThrottle
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     username_field = 'email'
-    throttle_classes = [LoginRateThrottle]
+   
 
 
     def validate(self, attrs):
@@ -40,3 +40,4 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
+    throttle_classes = [LoginRateThrottle]
