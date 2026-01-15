@@ -114,21 +114,22 @@ SIMPLE_JWT = {
 # }
 
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": config("POSTGRES_DB"),
-#         "USER": config("POSTGRES_USER"),
-#         "PASSWORD": config("POSTGRES_PASSWORD"),
-#         "HOST": config("DB_HOST"),
-#         "PORT": config("DB_PORT"),
-#     }
-# }
-
-# for host on render database
 DATABASES = {
-   'default':dj_database_url.config(default='DATABASE_URL')
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": config("POSTGRES_DB"),
+        "USER": config("POSTGRES_USER"),
+        "PASSWORD": config("POSTGRES_PASSWORD"),
+        "HOST": config("DB_HOST"),
+        "PORT": config("DB_PORT"),
+    }
 }
+
+
+# # for host on render database
+# DATABASES = {
+#    'default':dj_database_url.config(default='DATABASE_URL')
+# }
 
 #custome user use korle aita use kora lage
 AUTH_USER_MODEL = "accounts.User"
