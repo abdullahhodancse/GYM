@@ -29,7 +29,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-x_+2#dqo4zv-b3ju6a$d)rcv0uf!2ow(ok9xfmo^!2f8%3+$qo'
 # admin reg secret key
-ADMIN_REG_SECRET = "GYM@1234567890"
+ADMIN_REG_SECRET = "Admin_pass"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
