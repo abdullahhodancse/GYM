@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from datetime import timedelta
 from pathlib import Path
+import dj_database_url
 
 from decouple import config
 import environ
@@ -112,15 +113,19 @@ SIMPLE_JWT = {
 # }
 
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": config("POSTGRES_DB"),
+#         "USER": config("POSTGRES_USER"),
+#         "PASSWORD": config("POSTGRES_PASSWORD"),
+#         "HOST": config("DB_HOST"),
+#         "PORT": config("DB_PORT"),
+#     }
+# }
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": config("POSTGRES_DB"),
-        "USER": config("POSTGRES_USER"),
-        "PASSWORD": config("POSTGRES_PASSWORD"),
-        "HOST": config("DB_HOST"),
-        "PORT": config("DB_PORT"),
-    }
+   'default':dj_database_url.config(default='DATABASE_URL')
 }
 
 #custome user use korle aita use kora lage
