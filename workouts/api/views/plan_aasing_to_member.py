@@ -3,7 +3,7 @@
 from rest_framework import generics
 from workouts.models.memberworkOut import MemberWorkOut
 from workouts.api.serializer.plan_assaing_to_member import  MemberWorkoutAssignSerializer
-from trainer_permission import IsTrainer
+from permissions.trainer_permission import IsTrainer
 
 
 class AssignMemberToWorkoutPlanView(generics.CreateAPIView):

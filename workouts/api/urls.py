@@ -3,7 +3,7 @@ from workouts.api.views.workout_task import WorkoutTaskCreateView
 from workouts.api.views.work_out_plan_show import WorkoutPlanListView
 from workouts.api.views.plan_aasing_to_member import AssignMemberToWorkoutPlanView
 from workouts.api.views.own_plan_list import MemberAssignedWorkoutListView
-from workouts.api.views.status_update_by_trainer import MemberWorkoutStatusUpdateView
+from workouts.api.views.status_update_by_trainer_or_self import MemberWorkoutStatusUpdateView
 
 from django.urls import path
 

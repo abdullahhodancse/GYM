@@ -4,7 +4,7 @@ from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
 from workouts.models.memberworkOut import MemberWorkOut
 from workouts.api.serializer.own_plan_list import MemberAssignedWorkoutListSerializer
-from member_permission import IsMember
+from permissions.member_permission import IsMember
    
 
 

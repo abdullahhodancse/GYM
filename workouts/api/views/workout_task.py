@@ -1,5 +1,5 @@
 
-from  trainer_permission import IsTrainer
+from  permissions.trainer_permission import IsTrainer
 from workouts.models.workOutTask import WorkOutTask
 from workouts.api.serializer.work_out__task import WorkoutTaskCreateSerializer
 

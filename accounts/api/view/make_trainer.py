@@ -2,7 +2,7 @@
 from rest_framework import generics, status
 from rest_framework.response import Response
 from accounts.api.serializers.trainer.make_trainer import MakeTrainerSerializer
-from manager_permission import IsManager
+from permissions.manager_permission import IsManager
 
 
 class MakeTrainerView(generics.CreateAPIView):

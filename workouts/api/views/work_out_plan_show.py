@@ -3,8 +3,7 @@
 from rest_framework import generics
 from workouts.models.workOut_plan import WorkOutPlan
 from workouts.api.serializer.work_out_plan_show import (WorkOutPlanWithTaskSerializer)
-from manager_permission import IsManager
-from adminOrManager_permission import IsAdminOrManager
+from permissions.adminOrManager_permission import IsAdminOrManager
 
 
 class WorkoutPlanListView(generics.ListAPIView):

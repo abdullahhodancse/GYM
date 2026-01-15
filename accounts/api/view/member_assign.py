@@ -2,7 +2,7 @@
 from rest_framework import generics, status
 from rest_framework.response import Response
 from accounts.api.serializers.member.member_assign import AssignMemberToBranchSerializer
-from manager_permission import IsManager
+from permissions.manager_permission import IsManager
 
 class AssignMemberToBranchView(generics.CreateAPIView):
     serializer_class = AssignMemberToBranchSerializer

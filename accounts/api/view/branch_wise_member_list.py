@@ -1,7 +1,7 @@
 from rest_framework import generics
 from accounts.models.member import Member
 from accounts.api.serializers.member.branch_wise_member import BranchWiseMemberListSerializer
-from adminOrManager_permission import IsAdminOrManager
+from permissions.adminOrManager_permission import IsAdminOrManager
 
 class BranchWiseMemberListView(generics.ListAPIView):
     serializer_class = BranchWiseMemberListSerializer

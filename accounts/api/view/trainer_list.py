@@ -2,7 +2,7 @@
 from rest_framework import generics
 from accounts.models.trainer import Trainer
 from accounts.api.serializers.trainer.trainer_list import TrainerListSerializer
-from admin_permission import IsAdmin 
+from permissions.admin_permission import IsAdmin 
 
 class TrainerListView(generics.ListAPIView):
     serializer_class = TrainerListSerializer
