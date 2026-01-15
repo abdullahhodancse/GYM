@@ -328,6 +328,54 @@ How to use the Postman collection
 
 
 
+Pre-created Test Users :
+
+Admin:{
+  "email": "admi11@gym.com",
+  "password": "Hodan@1234567890",
+  "password2": "Hodan@1234567890",
+  "secret_key":"GYM@1234567890"
+  "role":"admin"
+  
+}
+
+
+trainer:{
+    "email": "member1@gym.com",
+    "password": "Hodan@1234567890"
+    "branch_name": "Dhaka12332 Branch(id:5)"
+    "role":"trainer"
+}
+
+
+member:{
+    "email": "member2@gym.com",
+    "password": "Hodan@1234567890"
+    "branch_name": "Dhaka12332 Branch(id:5)"
+    "role":"member"
+    
+}
+
+manager:{
+    "email": "manager@gym.com",
+    "password": "Hodan@1234567890"
+    "branch_name": "Dhaka12332 Branch(id:5)"
+    "role":"manager"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
