@@ -15,6 +15,8 @@ class MemberAssignedWorkoutListView(generics.ListAPIView):
     permission_classes = [IsMember]
     pagination_class = Pagination
 
+
+# implementation ORM 
     def get_queryset(self):
         return (
             MemberWorkOut.objects

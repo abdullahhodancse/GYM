@@ -7,4 +7,4 @@ class BranchUpdateView(generics.UpdateAPIView):
     queryset = Branch.objects.all()
     serializer_class = BranchSerializer
     permission_classes = [IsAdmin]
-    lookup_field = "id"
+    lookup_field = "id"   #to find out objects

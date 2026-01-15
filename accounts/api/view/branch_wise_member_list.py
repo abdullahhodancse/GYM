@@ -13,12 +13,12 @@ class BranchWiseMemberListView(generics.ListAPIView):
         user = self.request.user
         queryset = Member.objects.select_related("user", "branch")
 
-        # 🔹 Admin logic
+        #  Admin logic
         if user.role == "admin":
             branch_id = self.request.query_params.get("branch_id")
             if branch_id:
                 return queryset.filter(branch_id=branch_id)
             return queryset # admin gets all member if branch id not provied
          
-        # 🔹 Manager logic
+        #  Manager logic
         return queryset.filter(branch=user.manager.branch)

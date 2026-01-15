@@ -12,6 +12,8 @@ class WorkoutTaskCreateView(generics.CreateAPIView):
     serializer_class = WorkoutTaskCreateSerializer
     permission_classes = [IsTrainer]
 
+
+     # provite extra data 
     def get_serializer_context(self):
         context = super().get_serializer_context()
         context["request"] = self.request

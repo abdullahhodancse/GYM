@@ -10,6 +10,8 @@ class AssignMemberToWorkoutPlanView(generics.CreateAPIView):
     queryset =MemberWorkOut.objects.all()
     serializer_class = MemberWorkoutAssignSerializer
     permission_classes = [ IsTrainer]
+    
 
+    # provite extra data like branch  or who is the logged in
     def get_serializer_context(self):
         return {"request": self.request}

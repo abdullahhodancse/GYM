@@ -8,12 +8,13 @@ class AssignMemberToBranchView(generics.CreateAPIView):
     serializer_class = AssignMemberToBranchSerializer
     permission_classes = [IsManager]
 
-    def create(self, request, *args, **kwargs):
+
+    def create(self, request, *args, **kwargs):  # Handle POST request to assign a member to a branch.
         serializer = self.get_serializer(
             data=request.data,
             context={"request": request}
         )
-        serializer.is_valid(raise_exception=True)
+        serializer.is_valid(raise_exception=True) #  Initialize serializer with request context
         member = serializer.save()
 
         return Response({
