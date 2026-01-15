@@ -51,11 +51,24 @@ The system is designed to solve the following problems:
 ━━━━━━━━━━━━━━━━━━━━━━━
 
 Layer	Technology
+
+
 Backend	Django, Django REST Framework
+
+
 Database	PostgreSQL
+
+
 Security	RBAC
+
+
 Deployment	Render
+
+
 API Testing	Postman
+
+
+Rate limit for login 1 min 5 login request
 
 
 
@@ -92,7 +105,7 @@ Create a Django superuser to access the admin panel.
 
 Step 7: Run Server
 
-Start the development server.
+Start the development server. You need to uncomment the settings line  130 to 139 umber line
 
 Local Base URL:
 http://127.0.0.1:8000/
