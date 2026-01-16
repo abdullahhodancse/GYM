@@ -171,6 +171,57 @@ https://gym-51v6.onrender.com
 
 
 
+user_regisration:https://gym-51v6.onrender.com/accounts/reg/
+
+LogIn:https://gym-51v6.onrender.com/accounts/login/
+
+profile:https://gym-51v6.onrender.com/accounts/profile/
+
+Profile_update:https://gym-51v6.onrender.com/accounts/profile/update/
+
+admin_reg:https://gym-51v6.onrender.com/accounts/admin/register/
+
+Make_Manager:https://gym-51v6.onrender.com/accounts/make_manager/
+
+manager_list:https://gym-51v6.onrender.com/accounts/managers/list/
+
+member_list_for_admin:https://gym-51v6.onrender.com/accounts/branch_members/
+
+
+branch_create:http://gym-51v6.onrender.com/branches/create/
+
+branch_list:https://gym-51v6.onrender.com/branches/list/
+
+branch_update:https://gym-51v6.onrender.com/branches/update/<int:Id>/
+
+make_trainer:https://gym-51v6.onrender.com/accounts/make_trainer/
+
+trainer_list:https://gym-51v6.onrender.com/accounts/trainers_list/
+
+member_list_for_manager:https://gym-51v6.onrender.com/accounts/branch_members
+
+assign_member_branch:https://gym-51v6.onrender.com/accounts/assign_member/
+
+work_out_plan:https://gym-51v6.onrender.com/trainer/workout_plan/create/
+
+status_update_by_trainer:https://gym-51v6.onrender.com/workout/own_status_update/<int:Id>/
+
+work_out_list:https://gym-51v6.onrender.com/workout/workout-plans/list/
+
+assing_plan_to_member:https://gym-51v6.onrender.com/workout/assign_plan_member/
+
+work_out_task:https://gym-51v6.onrender.com/trainer/workout_task/create/
+
+Status_update_by_member:https://gym-51v6.onrender.com/workout/own_status_update/<int:Id>/
+
+
+Own_plan_list:https://gym-51v6.onrender.com/workout/own_plan_list/
+
+
+
+
+
+
 
 
 
